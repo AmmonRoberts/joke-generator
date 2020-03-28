@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(248, 246, 246);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header,
+main,
+body {
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.form-inline input,
+select {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(9, 95, 6);
+    border: 1px solid black;
+    color: white;
+    border-radius: 25px;
+}
+
+.form-inline button:hover,
+.jokeCard button:hover {
+    background-color: rgb(35, 71, 33);
+}
+
+.jokeCard {
+    width: 25em;
+    height: 15rem;
+    border-width: .5px;
+    border-style: solid;
+    border-color: rgb(199, 197, 197);
+    text-align: center;
+    padding: 1em;
+    margin: 1em;
+    display: inline-block;
+    position: static;
+
+}
+
+.jokeCard p {
+    display: none;
+    height: 50px;
+}
+
+/* Don't forget the thing for mobile. Card size needs to be way smaller */
