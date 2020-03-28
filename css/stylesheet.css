@@ -34,7 +34,7 @@ button {
 
 .jokeCard {
     width: 25em;
-    height: 15rem;
+    height: 15em;
     border-width: .5px;
     border-style: solid;
     border-color: rgb(199, 197, 197);
@@ -46,9 +46,22 @@ button {
 
 }
 
-.jokeCard p {
-    display: none;
-    height: 50px;
+.jokeCard div {
+    min-height: 12em;
+}
+
+.jokeCard div button {
+    position: absolute;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .output {
+        width: 100%;
+    }
+
+
+
 }
 
 /* Don't forget the thing for mobile. Card size needs to be way smaller */

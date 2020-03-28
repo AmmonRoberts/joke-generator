@@ -1,3 +1,5 @@
+let j = [];
+
 async function generateJokes() {
     clear();
     let count = parseInt(document.querySelector('#jokeCount').value);
@@ -14,12 +16,13 @@ async function generateJokes() {
                 let newDiv = document.createElement("div");
                 newDiv.setAttribute('class', 'jokeCard');
                 newDiv.innerHTML =
-                    `<button type="button" id="showButton${index}">Show me!</button>
-                    <p id='content${index}' style='display:none' margin='0'>${data.joke}</p>`;
+                    `<div id='content${index}'></div>
+                    <button type="button" id="showButton${index}">Show me!</button>`;
                 newDiv.addEventListener('click', function () {
                     showJoke(index)
                 })
                 document.querySelector('#output').appendChild(newDiv);
+                j[index] = data.joke;
             })
             .catch((err) => {
                 console.log('Something went wrong!', err);
@@ -34,7 +37,7 @@ function clear() {
 }
 
 function showJoke(num) {
-    document.querySelector(`#content${num}`).style.display = 'block';
+    document.querySelector(`#content${num}`).innerText = j[num];
 }
 
 document.querySelector(`#jokeCount`).addEventListener('change', generateJokes);
